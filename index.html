@@ -1,12 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CivicConnect</title>
-    <link href="./src/output.css" rel="stylesheet">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!--Font-->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <!--Fontawesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <!--CSS-->
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+    <!--Major-problems-->
+    <div class="major-problems">
+        <h2>Top 5 Major Problems</h2>
+        <p>Our most frequently reported issue types for fast action</p>
+
+        <div class="major-container">
+
+            <div class="major-card">
+                <i class="fa-solid fa-trash fa-2xl"></i>
+                <h4>Garbage Collection</h4>
+                <p>Overflowing bins or missed pickups</p>
+            </div>
+
+            <div class="major-card">
+                <i class="fa-solid fa-hammer fa-2xl"></i>
+                <h4>Pothole Repair</h4>
+                <p>Road damage such as potholes and cracks</p>
+            </div>
+
+            <div class="major-card">
+                <i class="fa-solid fa-droplet fa-2xl"></i>
+                <h4>Water Leakage</h4>
+                <p>Pipe bursts or drainage issues</p>
+            </div>
+
+            <div class="major-card">
+                <i class="fa-solid fa-lightbulb fa-2xl"></i>
+                <h4>Street Light Outage</h4>
+                <p>Broken or malfunctioning street lights</p>
+            </div>
+
+            <div class="major-card">
+                <i class="fa-solid fa-dog fa-2xl"></i>
+                <h4>Stray Dogs</h4>
+                <p>Unvaccinated or aggressive stray dogs</p>
+            </div>
+
+        </div>
+    </div>
+    <!--Statistical-Section-->
+    <div class="statistical">
+
+        <!--CHART-->
+        <div class="chart-box">
+            <div class="chart-text">
+                <h4>Statistical Dashboard</h4>
+                <p>Understand what matters most to your fellow citizens.</p>
+            </div>
+
+            <canvas id="issueChart"></canvas>
+        </div>
+
+        <!--SUMMARY-->
+        <div class="statistical-summary">
+            <h2>
+                <i class="fa-regular fa-share-from-square"></i>
+                Categorical Insights
+            </h2>
+
+            <p>Weekly analysis of municipal concerns.</p>
+
+            <div class="statistical-summary-cont">
+
+                <div class="statistical-summary-cont1">
+                    <h3>Waste Management</h3>
+                    <p>Garbage complaints decreased by 5% this week.</p>
+                </div>
+
+                <div class="statistical-summary-cont2">
+                    <h3>Infrastructure</h3>
+                    <p>Pothole reports concentrated in the West District.</p>
+                </div>
+
+                <div class="statistical-summary-cont3">
+                    <h3>Utility Services</h3>
+                    <p>Street light repairs are trending 20% faster than average.</p>
+                </div>
+
+                <p class="bottom-para">
+                    View full statistical report
+                    <i class="fa-solid fa-square-up-right"></i>
+                </p>
+
+            </div>
+        </div>
+
+    </div>
     
 </body>
+
 </html>

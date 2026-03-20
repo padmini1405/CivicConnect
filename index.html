@@ -28,12 +28,10 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="./src/output.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="faq.css">
 </head>
 
 <body>
-
-
     <!-- NAVBAR -->
     <header class="navbar">
 
@@ -43,11 +41,11 @@
         </div>
 
         <nav class="nav-links">
-            <a href="#">Home</a>
-            <a href="#">Complaints</a>
-            <a href="#">About</a>
+            <a href="./index.html">Home</a>
+            <a href="#complaint_form">Complaints</a>
+            <a href="./about.html">About</a>
             <a href="#">Contact</a>
-            <a href="#">Help/FAQ</a>
+            <a href="#faq_section">Help/FAQ</a>
         </nav>
 
         <div class="nav-right">
@@ -65,11 +63,11 @@
             <i id="closeBtn" class="fas fa-times"></i>
         </div>
 
-        <a href="#">Home</a>
-        <a href="#">Complaints</a>
-        <a href="#">About</a>
+        <a href="./index.html">Home</a>
+        <a href="#complaint_form">Complaints</a>
+        <a href="./about.html">About</a>
         <a href="#">Contact</a>
-        <a href="#">Help/FAQ</a>
+        <a href="#faq_section">Help/FAQ</a>
     </div>
 
     <!-- HERO -->
@@ -141,7 +139,7 @@
     </section>
 
     <!--Major-problems-->
-    <div class="major-problems">
+    <div class="major-problems" id="complaint_form">
         <h2>Top 5 Major Problems</h2>
         <p>Our most frequently reported issue types for fast action</p>
 
@@ -296,13 +294,58 @@
                     <h3>Utility Services</h3>
                     <p>Street light repairs are trending 20% faster than average.</p>
                 </div>
-
             </div>
         </div>
-
     </div>
 
-    <script src="script.js"></script>
+    <!-- FAQ section  -->
+
+    <section class="home-faq-preview" id="faq_section">
+        <div class="faq-preview-content">
+            <header class="faq-preview-header">
+                <h3>Frequently Asked Questions(FAQ)</h3>
+            </header>
+
+            <div class="faq-preview-list">
+                <div class="faq-preview-card">
+                    <button class="accordion-header">What is CivicConnect? <i class="fa-solid fa-angle-down"
+                            style="color: rgb(11, 11, 11);"></i></button>
+                    <div class="accordion-content">
+                        <p>CivicConnect is a secure digital platform designed to bridge the gap between citizens and
+                            municipal departments, making it simple to report and track non-emergency city issues from
+                            potholes to broken streetlights.</p>
+                    </div>
+                </div>
+
+                <div class="faq-preview-card">
+                    <button class="accordion-header">Who can use this service? <i class="fa-solid fa-angle-down"
+                            style="color: rgb(11, 11, 11);"></i></button>
+                    <div class="accordion-content">
+                        <p>This service is freely available to all verified residents, business owners, and visitors
+                            within the city limits. We encourage everyone to participate in making our community better.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-preview-card">
+                    <button class="accordion-header">Is it free to report issues? <i class="fa-solid fa-angle-down"
+                            style="color: rgb(11, 11, 11);"></i></button>
+                    <div class="accordion-content">
+                        <p>Absolutely. Reporting issues through CivicConnect is a complimentary civic service funded by
+                            your existing taxpayer dollars. There are no hidden fees or charges for submitting reports.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-view-more-container">
+                <a href="faq.html" class="view-more-cta">
+                    <span>View More FAQs</span>
+                    <i class="fa-solid fa-arrow-right" style="color: rgb(251, 250, 250);"></i>
+                </a>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer: Site-wide footer with brand info, navigation, and social links -->
     <footer class="footer">
@@ -323,9 +366,9 @@
             <div class="footer-section">
                 <h4>Quick Links</h4>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Report Issue</a></li>
-                    <li><a href="#">FAQ</a></li>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="#complaint_form">Report Issue</a></li>
+                    <li><a href="./faq.html">FAQ</a></li>
                     <li><a href="#">Contact Us</a></li>
                 </ul>
             </div>
@@ -344,8 +387,7 @@
         </div>
         <footer>
             <script src="script.js"></script>
-
-
+            <script src="faq.js"></script>
 </body>
 
 </html>

@@ -3,17 +3,17 @@
 
 <head>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CivicConnect</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CivicConnect</title>
 
-<!-- Chart.js -->
+    <!-- Chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-<link rel="stylesheet" href="style.css">
-<!--Fontawesome-->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!--Fontawesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,113 +34,113 @@
 <body>
 
 
-<!-- NAVBAR -->
-<header class="navbar">
+    <!-- NAVBAR -->
+    <header class="navbar">
 
-    <div class="nav-left">
-        <i class="fa-solid fa-city logo-icon"></i>
-        <span>CivicConnect</span>
-    </div>
+        <div class="nav-left">
+            <i class="fa-solid fa-city logo-icon"></i>
+            <span>CivicConnect</span>
+        </div>
 
-    <nav class="nav-links">
+        <nav class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Complaints</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <a href="#">Help/FAQ</a>
+        </nav>
+
+        <div class="nav-right">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <button class="btn-dark">Report Issue</button>
+            <button class="btn-light">Login</button>
+        </div>
+
+        <i id="menuBtn" class="fas fa-bars menu-icon"></i>
+    </header>
+
+    <!-- SIDEBAR -->
+    <div id="sidebar" class="sidebar">
+        <div class="close">
+            <i id="closeBtn" class="fas fa-times"></i>
+        </div>
+
         <a href="#">Home</a>
         <a href="#">Complaints</a>
         <a href="#">About</a>
         <a href="#">Contact</a>
         <a href="#">Help/FAQ</a>
-    </nav>
-
-    <div class="nav-right">
-        <i class="fa-solid fa-magnifying-glass"></i>
-        <button class="btn-dark">Report Issue</button>
-        <button class="btn-light">Login</button>
     </div>
 
-    <i id="menuBtn" class="fas fa-bars menu-icon"></i>
-</header>
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-container">
 
-<!-- SIDEBAR -->
-<div id="sidebar" class="sidebar">
-    <div class="close">
-        <i id="closeBtn" class="fas fa-times"></i>
-    </div>
+            <!-- LEFT -->
+            <div class="hero-left">
+                <span class="tag">Smart City Initiative</span>
 
-    <a href="#">Home</a>
-    <a href="#">Complaints</a>
-    <a href="#">About</a>
-    <a href="#">Contact</a>
-    <a href="#">Help/FAQ</a>
-</div>
+                <h1>
+                    Report City Issues<br>
+                    Easily with CivicConnect
+                </h1>
 
-<!-- HERO -->
-<section class="hero">
-    <div class="hero-container">
+                <p>
+                    Empowering citizens to build a better community.
+                    Report maintenance, safety, and infrastructure issues directly to the municipality in seconds.
+                </p>
 
-        <!-- LEFT -->
-        <div class="hero-left">
-            <span class="tag">Smart City Initiative</span>
+                <div class="hero-buttons">
+                    <button class="btn-dark">Report an Issue</button>
+                    <button class="btn-outline">View Top Problems</button>
+                </div>
 
-            <h1>
-                Report City Issues<br>
-                Easily with CivicConnect
-            </h1>
-
-            <p>
-                Empowering citizens to build a better community.
-                Report maintenance, safety, and infrastructure issues directly to the municipality in seconds.
-            </p>
-
-            <div class="hero-buttons">
-                <button class="btn-dark">Report an Issue</button>
-                <button class="btn-outline">View Top Problems</button>
+                <div class="users">
+                    <img src="https://i.pravatar.cc/40?img=1">
+                    <img src="https://i.pravatar.cc/40?img=2">
+                    <img src="https://i.pravatar.cc/40?img=3">
+                    <img src="https://i.pravatar.cc/40?img=4">
+                    <span>Joined by <b>15,000+</b> active citizens</span>
+                </div>
             </div>
 
-            <div class="users">
-                <img src="https://i.pravatar.cc/40?img=1">
-                <img src="https://i.pravatar.cc/40?img=2">
-                <img src="https://i.pravatar.cc/40?img=3">
-                <img src="https://i.pravatar.cc/40?img=4">
-                <span>Joined by <b>15,000+</b> active citizens</span>
+            <!-- RIGHT -->
+            <div class="hero-right">
+                <div class="card">
+
+                    <h3>Real-time City Pulse</h3>
+                    <p class="sub">Live reporting activity</p>
+
+                    <div class="issue">
+                        <span>Pothole Reported</span>
+                        <small>2m ago</small>
+                    </div>
+
+                    <div class="issue">
+                        <span>Broken Streetlight</span>
+                        <small>17m ago</small>
+                    </div>
+
+                    <div class="issue">
+                        <span>Missed Pickup</span>
+                        <small>45m ago</small>
+                    </div>
+
+                    <p class="goal">Monthly Resolution Goal</p>
+
+                    <div class="progress">
+                        <div class="progress-bar"></div>
+                    </div>
+
+                    <span class="percent">88%</span>
+
+                </div>
             </div>
+
         </div>
+    </section>
 
-        <!-- RIGHT -->
-        <div class="hero-right">
-            <div class="card">
-
-                <h3>Real-time City Pulse</h3>
-                <p class="sub">Live reporting activity</p>
-
-                <div class="issue">
-                    <span>Pothole Reported</span>
-                    <small>2m ago</small>
-                </div>
-
-                <div class="issue">
-                    <span>Broken Streetlight</span>
-                    <small>17m ago</small>
-                </div>
-
-                <div class="issue">
-                    <span>Missed Pickup</span>
-                    <small>45m ago</small>
-                </div>
-
-                <p class="goal">Monthly Resolution Goal</p>
-
-                <div class="progress">
-                    <div class="progress-bar"></div>
-                </div>
-
-                <span class="percent">88%</span>
-
-            </div>
-        </div>
-
-    </div>
-</section>
-
-<!--Major-problems-->
+    <!--Major-problems-->
     <div class="major-problems">
         <h2>Top 5 Major Problems</h2>
         <p>Our most frequently reported issue types for fast action</p>
@@ -223,141 +223,7 @@
 
     </div>
 
-<script src="script.js"></script>
-
-    <!-- FAQ section  -->
-
-
-        <div class="logo">
-            <i class="fa-solid fa-city"></i>
-            CivicConnect
-        </div>
-
-        <!--Menu Icon-->
-        <i id="menuBtn" class="fas fa-bars text-xl cursor-pointer md:hidden"></i>
-
-        <nav id="mobileMenu" class="nav hidden md:flex">
-            <i id="menuBtn" class="fas fa-bars text-xl cursor-pointer md:hidden"></i>
-
-            <a class="hover:underline" href="#">Home</a>
-            <a class="hover:underline" href="#">Complaints</a>
-            <a class="hover:underline" href="#">About</a>
-            <a class="hover:underline" href="#">Contact</a>
-            <a class="hover:underline" href="#">Help/FAQ</a>
-        </nav>
-
-        <a href="#" class="login-btn">Login</a>
-
-    </header>
-
-
-
-    <!-- SIDEBAR -->
-    <div id="sidebar"
-        class="fixed top-0 right-[-100%] w-64 h-full bg-white shadow-lg p-6 transition-all duration-500 z-50">
-
-        <!-- CLOSE BUTTON -->
-        <div class="flex justify-end mb-6">
-
-            <i id="closeBtn" class="fas fa-times text-xl cursor-pointer"></i>
-        </div>
-        <nav class="flex flex-col gap-6 text-lg">
-            <a class="hover:underline" href="#">Home</a>
-            <a class="hover:underline" href="#">Complaints</a>
-            <a class="hover:underline" href="#">About</a>
-            <a class="hover:underline" href="#">Contact</a>
-            <a class="hover:underline" href="#">Help/FAQ</a>
-        </nav>
-    </div>
-
-
-
-    <!-- MENU LINKS -->
-    <nav class="flex flex-col gap-6 text-lg">
-
-    </nav>
-    </div>
-
-
-
-
-    <section class="mobile-hero">
-
-
-        <div class="tag">Smart City Initiative</div>
-
-        <h1>Report City Issues Easily with CivicConnect</h1>
-
-        <p>
-            Report urban issues in seconds and track real-time progress
-            toward a better, smarter community.
-        </p>
-
-        <button class="btn">
-            <span>＋</span> Report an Issue
-        </button>
-
-    </section>
-
-    <!-- HERO -->
-    <section class="hero">
-        <div class="container">
-
-            <!-- LEFT -->
-            <div class="left">
-                <span class="tag">Smart City Initiative</span>
-
-                <h1>Report City Issues Easily with CivicConnect</h1>
-
-                <p>
-                    Empowering citizens to build a better community.
-                    Report maintenance, safety, and infrastructure issues directly to the municipality in seconds.
-                </p>
-
-                <button class="primary">Report an Issues</button>
-
-                <div class="users">
-                    <img src="https://i.pravatar.cc/40?img=1">
-                    <img src="https://i.pravatar.cc/40?img=2">
-                    <img src="https://i.pravatar.cc/40?img=3">
-                    <img src="https://i.pravatar.cc/40?img=4">
-                    <span>Joined by 15,000+ active citizens</span>
-                </div>
-            </div>
-
-            <!-- RIGHT -->
-            <div class="right">
-                <div class="card">
-                    <h3>Real-time City Pulse</h3>
-                    <p class="sub">Live reporting activity</p>
-
-                    <div class="issue">
-                        <span><i class="fas fa-road"></i>Pothole</span>
-                        <small>2m ago</small>
-                    </div>
-
-                    <div class="issue">
-                        <span><i class="fas fa-lightbulb"></i>Streetlight</span>
-                        <small>12m ago</small>
-                    </div>
-
-                    <div class="issue">
-                        <span><i class="fas fa-trash"></i>Pickup</span>
-                        <small>45m ago</small>
-                    </div>
-
-                    <p class="goal">Monthly Goal</p>
-
-                    <div class="progress">
-                        <div class="progress-bar"></div>
-                    </div>
-
-                    <h4>88%</h4>
-                </div>
-            </div>
-
-        </div>
-    </section>
+    <script src="script.js"></script>
 
     <!-- FOOTER -->
     <footer class="footer">

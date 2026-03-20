@@ -147,36 +147,115 @@
 
         <div class="major-container">
 
-            <div class="major-card">
+            <div class="major-card" onclick="openComplaintForm('Garbage Collection')" style="cursor:pointer;">
                 <i class="fa-solid fa-trash fa-2xl"></i>
                 <h4>Garbage Collection</h4>
                 <p>Overflowing bins or missed pickups</p>
             </div>
 
-            <div class="major-card">
+            <div class="major-card" onclick="openComplaintForm('Pothole Repair')" style="cursor:pointer;">
                 <i class="fa-solid fa-hammer fa-2xl"></i>
                 <h4>Pothole Repair</h4>
                 <p>Road damage such as potholes and cracks</p>
             </div>
 
-            <div class="major-card">
+            <div class="major-card" onclick="openComplaintForm('Water Leakage')" style="cursor:pointer;">
                 <i class="fa-solid fa-droplet fa-2xl"></i>
                 <h4>Water Leakage</h4>
                 <p>Pipe bursts or drainage issues</p>
             </div>
 
-            <div class="major-card">
+            <div class="major-card" onclick="openComplaintForm('Street Light Outage')" style="cursor:pointer;">
                 <i class="fa-solid fa-lightbulb fa-2xl"></i>
                 <h4>Street Light Outage</h4>
                 <p>Broken or malfunctioning street lights</p>
             </div>
 
-            <div class="major-card">
+            <div class="major-card" onclick="openComplaintForm('Stray Dogs')" style="cursor:pointer;">
                 <i class="fa-solid fa-dog fa-2xl"></i>
                 <h4>Stray Dogs</h4>
                 <p>Unvaccinated or aggressive stray dogs</p>
             </div>
 
+        </div>
+    </div>
+    <!-- Complaint Form Modal -->
+    <div id="complaintModal" class="modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeComplaintForm()">&times;</button>
+            <h2>Report a Complaint</h2>
+            <form id="complaintForm" onsubmit="submitComplaint(event)" novalidate>
+                <div class="form-group">
+                    <label for="fullName">Full Name <span class="required">*</span></label>
+                    <input type="text" id="fullName" placeholder="Full Name (letters only)" autocomplete="off">
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="phone">Phone Number <span class="required">*</span></label>
+                        <input type="tel" id="phone" placeholder="10-digit number" maxlength="10" autocomplete="off">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email <span class="required">*</span></label>
+                        <input type="text" id="email" placeholder="example@domain.com" autocomplete="off">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="location">Location / Area <span class="required">*</span></label>
+                    <input type="text" id="location" placeholder="Enter area name">
+                </div>
+                <div class="form-group">
+                    <label for="landmark">Exact Landmark <span class="required">*</span></label>
+                    <input type="text" id="landmark" placeholder="e.g. Near Smith Street Bus Stop">
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="date">Date <span class="required">*</span></label>
+                        <input type="date" id="date">
+                    </div>
+                    <div class="form-group">
+                        <label for="timeInput">Time <span class="required">*</span></label>
+                        <div class="time-outer" id="timeWrapper">
+                            <div class="time-main-bar" id="timeMainBar">
+                                <input type="time" id="timeInput" placeholder="--:--">
+                                <span class="time-ampm-selected" id="ampmSelected"></span>
+                                <button type="button" class="time-chevron-btn" id="ampmToggle" onclick="toggleAmPm()">
+                                    <i class="fa-solid fa-chevron-down ampm-arrow" id="ampmArrow"></i>
+                                </button>
+                            </div>
+                            <div class="ampm-row" id="ampmMenu">
+                                <div class="ampm-cell" id="amCell" onclick="selectAmPm('AM')">AM</div>
+                                <div class="ampm-cell" id="pmCell" onclick="selectAmPm('PM')">PM</div>
+                            </div>
+                            <input type="hidden" id="ampmValue">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="days">Problem Exists For (Days) <span class="required">*</span></label>
+                        <input type="number" id="days" placeholder="1" value="1" min="1">
+                    </div>
+                    <div class="form-group">
+                        <label for="priority">Priority Level <span class="required">*</span></label>
+                        <select id="priority">
+                            <option value="">Select Priority</option>
+                            <option value="Low">Low</option>
+                            <option value="Medium">Medium</option>
+                            <option value="High">High</option>
+                            <option value="Critical">Critical</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="description">Description <span class="required">*</span></label>
+                    <textarea id="description" placeholder="Describe the issue in detail... (max 700 characters)"
+                        maxlength="700"></textarea>
+                    <div class="char-counter"><span id="charCount">0</span> / 700 characters</div>
+                </div>
+                <div id="formErrors" class="form-errors" style="display:none;"></div>
+                <button type="submit" class="submit-btn">Submit Complaint</button>
+            </form>
         </div>
     </div>
     <!--Statistical-Section-->
@@ -225,43 +304,46 @@
 
     <script src="script.js"></script>
 
-    <!-- FOOTER -->
+    <!-- Footer: Site-wide footer with brand info, navigation, and social links -->
     <footer class="footer">
-
+        <!-- footer-container -->
         <div class="footer-container">
-
-            <!-- LEFT -->
-            <div class="footer-left">
-                <h3><i class="fa-solid fa-city"></i> CivicConnect</h3>
-                <p>Helpline: 1800-CITY-HELP</p>
-                <small>Emergency: 911 / 112</small>
+            <div class="footer-section">
+                <div class="footer-brand">
+                    <div class="logo-circle">
+                        <img src="./Images/logo.png" alt="CivicConnect Logo" class="brand-logo">
+                    </div>
+                    <span>CivicConnect</span>
+                </div>
+                <div class="footer-info">
+                    <p><i class="fa-solid fa-phone"></i> Helpline: 1800-CITY-HELP</p>
+                    <p>Emergency: 911 / 112</p>
+                </div>
             </div>
-
-            <!-- QUICK LINKS -->
-            <div class="footer-links">
+            <div class="footer-section">
                 <h4>Quick Links</h4>
-                <a href="#">Home</a>
-                <a href="#">Report Issue</a>
-                <a href="#">FAQ</a>
-                <a href="#">Contact Us</a>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Report Issue</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
             </div>
-
-            <!-- CONNECT -->
-            <div class="footer-connect">
+            <div class="footer-section">
                 <h4>Connect</h4>
-                <p>complaints@civicconnect.gov</p>
-                <div class="socials">
-                    <i class="fab fa-facebook"></i>
-                    <i class="fab fa-twitter"></i>
-                    <i class="fab fa-instagram"></i>
+                <p><i class="fa-solid fa-envelope"></i> complaints@civicconnect.gov</p>
+                <div class="social-links">
+                    <a href="javascript:void(0)"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="javascript:void(0)"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="javascript:void(0)"><i class="fa-brands fa-instagram"></i></a>
                 </div>
             </div>
         </div>
-        <p class="copyright">
-            © 2026 CivicConnect. All rights reserved.
-        </p>
-    </footer>
-    <script src="script.js"></script>
+        <div class="footer-bottom">
+            <p>&copy; 2026 CivicConnect. All rights reserved. Government of Smart City.</p>
+        </div>
+        <footer>
+            <script src="script.js"></script>
 
 
 </body>

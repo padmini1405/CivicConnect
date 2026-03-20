@@ -2,6 +2,19 @@
 <html lang="en">
 
 <head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CivicConnect</title>
+
+<!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<link rel="stylesheet" href="style.css">
+<!--Fontawesome-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CivicConnect</title>
@@ -10,12 +23,209 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="./src/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
-    <!-- NAVBAR -->
-    <header class="navbar shadow-xl sticky top-0 bg-white z-50">
+
+
+<!-- NAVBAR -->
+<header class="navbar">
+
+    <div class="nav-left">
+        <i class="fa-solid fa-city logo-icon"></i>
+        <span>CivicConnect</span>
+    </div>
+
+    <nav class="nav-links">
+        <a href="#">Home</a>
+        <a href="#">Complaints</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a href="#">Help/FAQ</a>
+    </nav>
+
+    <div class="nav-right">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <button class="btn-dark">Report Issue</button>
+        <button class="btn-light">Login</button>
+    </div>
+
+    <i id="menuBtn" class="fas fa-bars menu-icon"></i>
+</header>
+
+<!-- SIDEBAR -->
+<div id="sidebar" class="sidebar">
+    <div class="close">
+        <i id="closeBtn" class="fas fa-times"></i>
+    </div>
+
+    <a href="#">Home</a>
+    <a href="#">Complaints</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+    <a href="#">Help/FAQ</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-container">
+
+        <!-- LEFT -->
+        <div class="hero-left">
+            <span class="tag">Smart City Initiative</span>
+
+            <h1>
+                Report City Issues<br>
+                Easily with CivicConnect
+            </h1>
+
+            <p>
+                Empowering citizens to build a better community.
+                Report maintenance, safety, and infrastructure issues directly to the municipality in seconds.
+            </p>
+
+            <div class="hero-buttons">
+                <button class="btn-dark">Report an Issue</button>
+                <button class="btn-outline">View Top Problems</button>
+            </div>
+
+            <div class="users">
+                <img src="https://i.pravatar.cc/40?img=1">
+                <img src="https://i.pravatar.cc/40?img=2">
+                <img src="https://i.pravatar.cc/40?img=3">
+                <img src="https://i.pravatar.cc/40?img=4">
+                <span>Joined by <b>15,000+</b> active citizens</span>
+            </div>
+        </div>
+
+        <!-- RIGHT -->
+        <div class="hero-right">
+            <div class="card">
+
+                <h3>Real-time City Pulse</h3>
+                <p class="sub">Live reporting activity</p>
+
+                <div class="issue">
+                    <span>Pothole Reported</span>
+                    <small>2m ago</small>
+                </div>
+
+                <div class="issue">
+                    <span>Broken Streetlight</span>
+                    <small>17m ago</small>
+                </div>
+
+                <div class="issue">
+                    <span>Missed Pickup</span>
+                    <small>45m ago</small>
+                </div>
+
+                <p class="goal">Monthly Resolution Goal</p>
+
+                <div class="progress">
+                    <div class="progress-bar"></div>
+                </div>
+
+                <span class="percent">88%</span>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!--Major-problems-->
+    <div class="major-problems">
+        <h2>Top 5 Major Problems</h2>
+        <p>Our most frequently reported issue types for fast action</p>
+
+        <div class="major-container">
+
+            <div class="major-card">
+                <i class="fa-solid fa-trash fa-2xl"></i>
+                <h4>Garbage Collection</h4>
+                <p>Overflowing bins or missed pickups</p>
+            </div>
+
+            <div class="major-card">
+                <i class="fa-solid fa-hammer fa-2xl"></i>
+                <h4>Pothole Repair</h4>
+                <p>Road damage such as potholes and cracks</p>
+            </div>
+
+            <div class="major-card">
+                <i class="fa-solid fa-droplet fa-2xl"></i>
+                <h4>Water Leakage</h4>
+                <p>Pipe bursts or drainage issues</p>
+            </div>
+
+            <div class="major-card">
+                <i class="fa-solid fa-lightbulb fa-2xl"></i>
+                <h4>Street Light Outage</h4>
+                <p>Broken or malfunctioning street lights</p>
+            </div>
+
+            <div class="major-card">
+                <i class="fa-solid fa-dog fa-2xl"></i>
+                <h4>Stray Dogs</h4>
+                <p>Unvaccinated or aggressive stray dogs</p>
+            </div>
+
+        </div>
+    </div>
+    <!--Statistical-Section-->
+    <div class="statistical">
+
+        <!--CHART-->
+        <div class="chart-box">
+            <div class="chart-text">
+                <h4>Statistical Dashboard</h4>
+                <p>Understand what matters most to your fellow citizens.</p>
+            </div>
+
+            <canvas id="issueChart"></canvas>
+        </div>
+
+        <!--SUMMARY-->
+        <div class="statistical-summary">
+            <h2>
+                <i class="fa-regular fa-share-from-square"></i>
+                Categorical Insights
+            </h2>
+
+            <p>Weekly analysis of municipal concerns.</p>
+
+            <div class="statistical-summary-cont">
+
+                <div class="statistical-summary-cont1">
+                    <h3>Waste Management</h3>
+                    <p>Garbage complaints decreased by 5% this week.</p>
+                </div>
+
+                <div class="statistical-summary-cont2">
+                    <h3>Infrastructure</h3>
+                    <p>Pothole reports concentrated in the West District.</p>
+                </div>
+
+                <div class="statistical-summary-cont3">
+                    <h3>Utility Services</h3>
+                    <p>Street light repairs are trending 20% faster than average.</p>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+<script src="script.js"></script>
+
+    <!-- FAQ section  -->
 
 
         <div class="logo">
@@ -186,6 +396,8 @@
         </p>
     </footer>
     <script src="script.js"></script>
+
+
 </body>
 
 </html>

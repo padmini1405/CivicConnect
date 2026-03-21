@@ -14,9 +14,46 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="./src/output.css" rel="stylesheet">
     <link rel="stylesheet" href="faq.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <!-- NAVBAR -->
+    <header class="navbar">
+
+        <div class="nav-left">
+            <i class="fa-solid fa-city logo-icon"></i>
+            <span>CivicConnect</span>
+        </div>
+
+        <nav class="nav-links">
+            <a class="navbar-text" href="./index.html">Home</a>
+            <a class="navbar-text" href="./index.html">Complaints</a>
+            <a class="navbar-text" href="./about.html">About</a>
+            <a class="navbar-text" href="./faq.html">Help/FAQ</a>
+        </nav>
+
+        <div class="nav-right">
+            <button class="btn-light">Login</button>
+        </div>
+
+        <i id="menuBtn" class="fas fa-bars menu-icon"></i>
+    </header>
+
+     <!-- SIDEBAR -->
+    <div id="sidebar" class="sidebar">
+        <div style="text-align: right; padding: 15px;">
+            <p id="closeBtn" style="cursor:pointer;">X</p>
+        </div>
+
+        <a class="navbar-text" href="./index.html">Home</a>
+        <a class="navbar-text" href="./index.html">Complaints</a>
+        <a class="navbar-text" href="./about.html">About</a>
+        <a class="navbar-text" href="./faq.html">Help/FAQ</a>
+    </div>
+
+    <!-- FAQ section  -->
+
     <section class="faq-container">
         <header class="faq-header">
             <h1>Frequently Asked Questions (FAQ)</h1>
@@ -208,6 +245,45 @@
             </div>
         </div>
     </section>
+
+    <!-- Footer: Site-wide footer with brand info, navigation, and social links -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <div class="footer-brand">
+                    <div class="logo-circle">
+                        <img src="./Images/logo.png" alt="CivicConnect Logo" class="brand-logo">
+                    </div>
+                    <span>CivicConnect</span>
+                </div>
+                <div class="footer-info">
+                    <p><i class="fa-solid fa-phone"></i> Helpline: 1800-CITY-HELP</p>
+                    <p>Emergency: 911 / 112</p>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./index.html">Report Issue</a></li>
+                    <li><a href="./faq.html">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <p><i class="fa-solid fa-envelope"></i> complaints@civicconnect.gov</p>
+                <div class="social-links">
+                    <a href="javascript:void(0)"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="javascript:void(0)"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="javascript:void(0)"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 CivicConnect. All rights reserved. Government of Smart City.</p>
+        </div>
+        <footer>
+    <script src="faq.js"></script>
     <script src="script.js"></script>
 </body>
 

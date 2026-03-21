@@ -14,9 +14,44 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="./src/output.css" rel="stylesheet">
     <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <!-- NAVBAR -->
+    <header class="navbar">
+
+        <div class="nav-left">
+            <i class="fa-solid fa-city logo-icon"></i>
+            <span>CivicConnect</span>
+        </div>
+
+        <nav class="nav-links">
+            <a class="navbar-text" href="./index.html">Home</a>
+            <a class="navbar-text" href="./index.html">Complaints</a>
+            <a class="navbar-text" href="./about.html">About</a>
+            <a class="navbar-text" href="./faq.html">Help/FAQ</a>
+        </nav>
+
+        <div class="nav-right">
+            <button class="btn-light">Login</button>
+        </div>
+
+        <i id="menuBtn" class="fas fa-bars menu-icon"></i>
+    </header>
+
+    <!-- SIDEBAR -->
+    <div id="sidebar" class="sidebar">
+        <div style="text-align: right; padding: 15px;">
+            <p id="closeBtn" style="cursor:pointer;">X</p>
+        </div>
+
+        <a class="navbar-text" href="./index.html">Home</a>
+        <a class="navbar-text" href="#">Complaints</a>
+        <a class="navbar-text" href="./about.html">About</a>
+        <a class="navbar-text" href="./faq.html">Help/FAQ</a>
+    </div>
+
     <!-- ABOUT HEADER -->
     <section class="about-header">
         <h1>🏙️ About CivicConnect</h1>
@@ -108,18 +143,16 @@
                 <h3>Community</h3>
                 <p>Join community participation efforts by reporting and upvoting issues in CivicConnect.</p>
             </div>
-
         </div>
     </section>
 
-    <!-- footer  -->
-
-    <!-- <footer class="footer">
+    <!-- Footer: Site-wide footer with brand info, navigation, and social links -->
+    <footer class="footer">
         <div class="footer-container">
             <div class="footer-section">
                 <div class="footer-brand">
                     <div class="logo-circle">
-                        <img src="./logo.png" alt="CivicConnect Logo" class="brand-logo">
+                        <img src="./Images/logo.png" alt="CivicConnect Logo" class="brand-logo">
                     </div>
                     <span>CivicConnect</span>
                 </div>
@@ -128,7 +161,6 @@
                     <p>Emergency: 911 / 112</p>
                 </div>
             </div>
-
             <div class="footer-section">
                 <h4>Quick Links</h4>
                 <ul>
@@ -138,22 +170,21 @@
                     <li><a href="#">Contact Us</a></li>
                 </ul>
             </div>
-
             <div class="footer-section">
                 <h4>Connect</h4>
                 <p><i class="fa-solid fa-envelope"></i> complaints@civicconnect.gov</p>
                 <div class="social-links">
-                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="javascript:void(0)"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="javascript:void(0)"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="javascript:void(0)"><i class="fa-brands fa-instagram"></i></a>
                 </div>
             </div>
         </div>
-
         <div class="footer-bottom">
             <p>&copy; 2026 CivicConnect. All rights reserved. Government of Smart City.</p>
         </div>
-    </footer> -->
+        <footer>
+            <script src="script.js"></script>
 </body>
 
 </html>

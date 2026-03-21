@@ -27,16 +27,13 @@
         </div>
 
         <nav class="nav-links">
-            <a href="./index.html">Home</a>
-            <a href="./index.html">Complaints</a>
-            <a href="./about.html">About</a>
-            <a href="#">Contact</a>
-            <a href="./faq.html">Help/FAQ</a>
+            <a class="navbar-text" href="./index.html">Home</a>
+            <a class="navbar-text" href="./index.html">Complaints</a>
+            <a class="navbar-text" href="./about.html">About</a>
+            <a class="navbar-text" href="./faq.html">Help/FAQ</a>
         </nav>
 
         <div class="nav-right">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <button class="btn-dark">Report Issue</button>
             <button class="btn-light">Login</button>
         </div>
 
@@ -45,15 +42,14 @@
 
      <!-- SIDEBAR -->
     <div id="sidebar" class="sidebar">
-        <div class="close">
-            <i id="closeBtn" class="fas fa-times"></i>
+        <div style="text-align: right; padding: 15px;">
+            <p id="closeBtn" style="cursor:pointer;">X</p>
         </div>
 
-        <a href="./index.html">Home</a>
-        <a href="#">Complaints</a>
-        <a href="./about.html">About</a>
-        <a href="#">Contact</a>
-        <a href="./faq.html">Help/FAQ</a>
+        <a class="navbar-text" href="./index.html">Home</a>
+        <a class="navbar-text" href="./index.html">Complaints</a>
+        <a class="navbar-text" href="./about.html">About</a>
+        <a class="navbar-text" href="./faq.html">Help/FAQ</a>
     </div>
 
     <!-- FAQ section  -->
@@ -271,7 +267,6 @@
                     <li><a href="./index.html">Home</a></li>
                     <li><a href="./index.html">Report Issue</a></li>
                     <li><a href="./faq.html">FAQ</a></li>
-                    <li><a href="#">Contact Us</a></li>
                 </ul>
             </div>
             <div class="footer-section">
@@ -289,25 +284,7 @@
         </div>
         <footer>
     <script src="faq.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
-<!-- <script>
-    document.querySelectorAll('.accordion-header').forEach(button => {
-    button.addEventListener('click', () => {
-        const accordionItem = button.parentElement;
-        const icon = button.querySelector('i');
-        
-        // Toggle the active class
-        accordionItem.classList.toggle('active');
-
-        // Toggle the icon (Caret Up / Down)
-        if (accordionItem.classList.contains('active')) {
-            icon.classList.replace('ph-caret-down', 'ph-caret-up');
-        } else {
-            icon.classList.replace('ph-caret-up', 'ph-caret-down');
-        }
-    });
-});
-
-</script> -->

@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CivicConnect</title>
@@ -34,65 +33,54 @@
 <body>
     <!-- NAVBAR -->
     <header class="navbar">
-
         <div class="nav-left">
-            <i class="fa-solid fa-city logo-icon"></i>
+            <svg id="menuicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.0"
+                stroke="black" class="w-6 h-6 md:hidden cursor-pointer">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
             <span>CivicConnect</span>
         </div>
-
         <nav class="nav-links">
-            <a href="./index.html">Home</a>
-            <a href="#complaint_form">Complaints</a>
-            <a href="./about.html">About</a>
-            <a href="#">Contact</a>
-            <a href="#faq_section">Help/FAQ</a>
+            <a class="navbar-text" href="./index.html">Home</a>
+            <a class="navbar-text" href="#complaint_form">Complaints</a>
+            <a class="navbar-text" href="./about.html">About</a>
+            <a class="navbar-text" href="#faq_section">Help/FAQ</a>
         </nav>
-
         <div class="nav-right">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <button class="btn-dark">Report Issue</button>
             <button class="btn-light">Login</button>
         </div>
-
         <i id="menuBtn" class="fas fa-bars menu-icon"></i>
     </header>
 
     <!-- SIDEBAR -->
     <div id="sidebar" class="sidebar">
-        <div class="close">
-            <i id="closeBtn" class="fas fa-times"></i>
+        <div style="text-align: right; padding: 15px;">
+            <p id="closeBtn" style="cursor:pointer;">X</p>
         </div>
-
-        <a href="./index.html">Home</a>
-        <a href="#complaint_form">Complaints</a>
-        <a href="./about.html">About</a>
-        <a href="#">Contact</a>
-        <a href="#faq_section">Help/FAQ</a>
+        <a class="navbar-text" href="./index.html">Home</a>
+        <a class="navbar-text" href="#complaint_form">Complaints</a>
+        <a class="navbar-text" href="./about.html">About</a>
+        <a class="navbar-text" href="#faq_section">Help/FAQ</a>
     </div>
 
     <!-- HERO -->
     <section class="hero">
         <div class="hero-container">
-
             <!-- LEFT -->
             <div class="hero-left">
                 <span class="tag">Smart City Initiative</span>
-
                 <h1>
                     Report City Issues<br>
                     Easily with CivicConnect
                 </h1>
-
                 <p>
                     Empowering citizens to build a better community.
                     Report maintenance, safety, and infrastructure issues directly to the municipality in seconds.
                 </p>
-
                 <div class="hero-buttons">
                     <button class="btn-dark">Report an Issue</button>
                     <button class="btn-outline">View Top Problems</button>
                 </div>
-
                 <div class="users">
                     <img src="https://i.pravatar.cc/40?img=1">
                     <img src="https://i.pravatar.cc/40?img=2">
@@ -105,36 +93,27 @@
             <!-- RIGHT -->
             <div class="hero-right">
                 <div class="card">
-
-                    <h3>Real-time City Pulse</h3>
+                    <h3 style="font-size: 22px;">Real-time City Pulse</h3>
                     <p class="sub">Live reporting activity</p>
-
                     <div class="issue">
                         <span>Pothole Reported</span>
                         <small>2m ago</small>
                     </div>
-
                     <div class="issue">
                         <span>Broken Streetlight</span>
                         <small>17m ago</small>
                     </div>
-
                     <div class="issue">
                         <span>Missed Pickup</span>
                         <small>45m ago</small>
                     </div>
-
                     <p class="goal">Monthly Resolution Goal</p>
-
                     <div class="progress">
                         <div class="progress-bar"></div>
                     </div>
-
                     <span class="percent">88%</span>
-
                 </div>
             </div>
-
         </div>
     </section>
 
@@ -147,151 +126,137 @@
 
             <div class="major-card" onclick="openComplaintForm('Garbage Collection')" style="cursor:pointer;">
                 <i class="fa-solid fa-trash fa-2xl"></i>
-                <h4>Garbage Collection</h4>
+                <h3>Garbage Collection</h3>
                 <p>Overflowing bins or missed pickups</p>
             </div>
 
             <div class="major-card" onclick="openComplaintForm('Pothole Repair')" style="cursor:pointer;">
                 <i class="fa-solid fa-hammer fa-2xl"></i>
-                <h4>Pothole Repair</h4>
+                <h3>Pothole Repair</h3>
                 <p>Road damage such as potholes and cracks</p>
             </div>
 
             <div class="major-card" onclick="openComplaintForm('Water Leakage')" style="cursor:pointer;">
                 <i class="fa-solid fa-droplet fa-2xl"></i>
-                <h4>Water Leakage</h4>
+                <h3>Water Leakage</h3>
                 <p>Pipe bursts or drainage issues</p>
             </div>
 
             <div class="major-card" onclick="openComplaintForm('Street Light Outage')" style="cursor:pointer;">
                 <i class="fa-solid fa-lightbulb fa-2xl"></i>
-                <h4>Street Light Outage</h4>
+                <h3>Street Light Outage</h3>
                 <p>Broken or malfunctioning street lights</p>
             </div>
 
             <div class="major-card" onclick="openComplaintForm('Stray Dogs')" style="cursor:pointer;">
                 <i class="fa-solid fa-dog fa-2xl"></i>
-                <h4>Stray Dogs</h4>
+                <h3>Stray Dogs</h3>
                 <p>Unvaccinated or aggressive stray dogs</p>
             </div>
-
         </div>
     </div>
+
     <!-- Complaint Form Modal -->
     <div id="complaintModal" class="modal">
         <div class="modal-overlay"></div>
         <div class="modal-content">
             <button class="close-btn" onclick="closeComplaintForm()">&times;</button>
             <h2>Report a Complaint</h2>
-            <form id="complaintForm" onsubmit="submitComplaint(event)" novalidate>
+            <form id="complaintForm">
                 <div class="form-group">
                     <label for="fullName">Full Name <span class="required">*</span></label>
                     <input type="text" id="fullName" placeholder="Full Name (letters only)" autocomplete="off">
+                    <span class="error" id="nameError"></span>
                 </div>
                 <div class="form-row">
                     <div class="form-group">
                         <label for="phone">Phone Number <span class="required">*</span></label>
                         <input type="tel" id="phone" placeholder="10-digit number" maxlength="10" autocomplete="off">
+                        <span class="error" id="phoneError"></span>
                     </div>
                     <div class="form-group">
                         <label for="email">Email <span class="required">*</span></label>
                         <input type="text" id="email" placeholder="example@domain.com" autocomplete="off">
+                        <span class="error" id="emailError"></span>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="location">Location / Area <span class="required">*</span></label>
                     <input type="text" id="location" placeholder="Enter area name">
+                    <span class="error" id="locationError"></span>
                 </div>
                 <div class="form-group">
                     <label for="landmark">Exact Landmark <span class="required">*</span></label>
                     <input type="text" id="landmark" placeholder="e.g. Near Smith Street Bus Stop">
+                    <span class="error" id="landmarkError"></span>
                 </div>
                 <div class="form-row">
                     <div class="form-group">
                         <label for="date">Date <span class="required">*</span></label>
                         <input type="date" id="date">
-                    </div>
-                    <div class="form-group">
-                        <label for="timeInput">Time <span class="required">*</span></label>
-                        <div class="time-outer" id="timeWrapper">
-                            <div class="time-main-bar" id="timeMainBar">
-                                <input type="time" id="timeInput" placeholder="--:--">
-                                <span class="time-ampm-selected" id="ampmSelected"></span>
-                                <button type="button" class="time-chevron-btn" id="ampmToggle" onclick="toggleAmPm()">
-                                    <i class="fa-solid fa-chevron-down ampm-arrow" id="ampmArrow"></i>
-                                </button>
-                            </div>
-                            <div class="ampm-row" id="ampmMenu">
-                                <div class="ampm-cell" id="amCell" onclick="selectAmPm('AM')">AM</div>
-                                <div class="ampm-cell" id="pmCell" onclick="selectAmPm('PM')">PM</div>
-                            </div>
-                            <input type="hidden" id="ampmValue">
-                        </div>
+                        <span class="error" id="dateError"></span>
                     </div>
                 </div>
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="days">Problem Exists For (Days) <span class="required">*</span></label>
-                        <input type="number" id="days" placeholder="1" value="1" min="1">
-                    </div>
-                    <div class="form-group">
-                        <label for="priority">Priority Level <span class="required">*</span></label>
-                        <select id="priority">
-                            <option value="">Select Priority</option>
-                            <option value="Low">Low</option>
-                            <option value="Medium">Medium</option>
-                            <option value="High">High</option>
-                            <option value="Critical">Critical</option>
-                        </select>
-                    </div>
+                <div class="form-group">
+                    <label for="days">Problem Exists For (Days) <span class="required">*</span></label>
+                    <input type="number" id="days" placeholder="1" min="1">
+                    <span class="error" id="daysError"></span>
                 </div>
+
+                <div class="form-group">
+                    <label for="priority">Priority Level <span class="required">*</span></label>
+                    <select id="priority">
+                        <option value="">Select Priority</option>
+                        <option value="Low">Low</option>
+                        <option value="Medium">Medium</option>
+                        <option value="High">High</option>
+                        <option value="Critical">Critical</option>
+                    </select>
+                    <span class="error" id="priorityError"></span>
+                </div>
+
                 <div class="form-group">
                     <label for="description">Description <span class="required">*</span></label>
                     <textarea id="description" placeholder="Describe the issue in detail... (max 700 characters)"
                         maxlength="700"></textarea>
                     <div class="char-counter"><span id="charCount">0</span> / 700 characters</div>
+                    <span class="error" id="descriptionError"></span>
                 </div>
-                <div id="formErrors" class="form-errors" style="display:none;"></div>
                 <button type="submit" class="submit-btn">Submit Complaint</button>
             </form>
         </div>
     </div>
+
     <!--Statistical-Section-->
     <div class="statistical">
-
         <!--CHART-->
         <div class="chart-box">
             <div class="chart-text">
-                <h4>Statistical Dashboard</h4>
+                <h2>Statistical Dashboard</h2>
                 <p>Understand what matters most to your fellow citizens.</p>
             </div>
-
             <canvas id="issueChart"></canvas>
         </div>
 
         <!--SUMMARY-->
         <div class="statistical-summary">
             <h2>
-                <i class="fa-regular fa-share-from-square"></i>
                 Categorical Insights
             </h2>
-
-            <p>Weekly analysis of municipal concerns.</p>
-
+            <p class="statistical-summary-para">Weekly analysis of municipal concerns.</p>
             <div class="statistical-summary-cont">
-
                 <div class="statistical-summary-cont1">
-                    <h3>Waste Management</h3>
+                    <h3 style="font-weight: bold;">Waste Management</h3>
                     <p>Garbage complaints decreased by 5% this week.</p>
                 </div>
 
                 <div class="statistical-summary-cont2">
-                    <h3>Infrastructure</h3>
+                    <h3 style="font-weight: bold;">Infrastructure</h3>
                     <p>Pothole reports concentrated in the West District.</p>
                 </div>
 
                 <div class="statistical-summary-cont3">
-                    <h3>Utility Services</h3>
+                    <h3 style="font-weight: bold;">Utility Services</h3>
                     <p>Street light repairs are trending 20% faster than average.</p>
                 </div>
             </div>
@@ -349,7 +314,6 @@
 
     <!-- Footer: Site-wide footer with brand info, navigation, and social links -->
     <footer class="footer">
-        <!-- footer-container -->
         <div class="footer-container">
             <div class="footer-section">
                 <div class="footer-brand">
@@ -369,7 +333,6 @@
                     <li><a href="./index.html">Home</a></li>
                     <li><a href="#complaint_form">Report Issue</a></li>
                     <li><a href="./faq.html">FAQ</a></li>
-                    <li><a href="#">Contact Us</a></li>
                 </ul>
             </div>
             <div class="footer-section">
@@ -386,8 +349,8 @@
             <p>&copy; 2026 CivicConnect. All rights reserved. Government of Smart City.</p>
         </div>
         <footer>
-            <script src="script.js"></script>
-            <script src="faq.js"></script>
+        <script src="script.js"></script>
+        <script src="faq.js"></script>
 </body>
 
 </html>

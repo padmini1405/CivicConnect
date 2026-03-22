@@ -21,9 +21,9 @@ However, reporting these problems to the concerned authorities is often difficul
 * Provide detailed information
 * Help authorities take faster action
 
-## Features
+## Features :
 
-## Complaint Form
+Complaint Form
 
 * User-friendly complaint submission form
 * Validations for all input fields
@@ -35,7 +35,7 @@ However, reporting these problems to the concerned authorities is often difficul
   * Priority Level
   * Description
 
-### Top 5 Major Problems Section
+Top 5 Major Problems Section
 
 Quick access complaint cards for common issues:
 
@@ -47,7 +47,7 @@ Quick access complaint cards for common issues:
 
 Clicking a card auto-opens the complaint form with pre-filled issue type.
 
-## FAQ Section
+FAQ Section
 
 * Accordion-based FAQ design
 * Helps users understand:
@@ -56,7 +56,7 @@ Clicking a card auto-opens the complaint form with pre-filled issue type.
   * Who can use it
   * How complaints work
 
-## About Page
+About Page
 
 * Explains:
   * Project purpose

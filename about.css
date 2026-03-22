@@ -264,13 +264,10 @@ body {
 }
 
 .logo-circle {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
+    width: 160px;
+    height: 90px;
     overflow: hidden;
-    border: none;
     box-shadow: none;
-    background-color: transparent;
     display: flex;
     align-items: center;
     justify-content: center;

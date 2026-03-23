@@ -49,19 +49,6 @@ new Chart(chart, {
     }
 });
 
-document.querySelectorAll('.accordion-header').forEach(button => {
-    button.addEventListener('click', () => {
-        const accordionItem = button.parentElement;
-        const icon = button.querySelector('i');
-        accordionItem.classList.toggle('active');
-        if (accordionItem.classList.contains('active')) {
-            icon.classList.replace('ph-caret-down', 'ph-caret-up');
-        } else {
-            icon.classList.replace('ph-caret-up', 'ph-caret-down');
-        }
-    });
-});
-
 
 //complaint form validation 
 
@@ -280,19 +267,19 @@ if (overlay) {
 }
 
 
-// FAQ script 
+document.addEventListener("DOMContentLoaded", function () {
 
-document.querySelectorAll('.accordion-header').forEach(button => {
-    button.addEventListener('click', () => {
-        const accordionItem = button.parentElement;
-        const icon = button.querySelector('i');
+    const items = document.querySelectorAll('.faq-preview-card');
 
-        accordionItem.classList.toggle('active');
+    items.forEach(item => {
+        const button = item.querySelector('.accordion-header');
 
-        if (accordionItem.classList.contains('active')) {
-            icon.classList.replace('fa-angle-down', 'fa-angle-up');
-        } else {
-            icon.classList.replace('fa-angle-up', 'fa-angle-down');
-        }
+        button.addEventListener('click', () => {
+
+            items.forEach(i => i.classList.remove('active'));
+            item.classList.add('active');
+
+        });
     });
+
 });
